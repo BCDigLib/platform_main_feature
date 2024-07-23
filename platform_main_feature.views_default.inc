@@ -452,6 +452,7 @@ function platform_main_feature_views_default_views() {
   );
   $export['platform_front_page'] = $view;
 
+/*
   $view = new view();
   $view->name = 'top_facet_searches';
   $view->description = 'Google Analytics integration, top facet searches';
@@ -460,9 +461,11 @@ function platform_main_feature_views_default_views() {
   $view->human_name = 'Top Facet Searches';
   $view->core = 7;
   $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $view->disabled = FALSE;
+*/ /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
+/*
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Top Facet Searches';
   $handler->display->display_options['use_more_always'] = FALSE;
@@ -495,24 +498,35 @@ function platform_main_feature_views_default_views() {
       'empty_column' => 0,
     ),
   );
+*/
+
   /* Field: Internal search dimensions: Site Search Category */
+/*
   $handler->display->display_options['fields']['facet']['id'] = 'facet';
   $handler->display->display_options['fields']['facet']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['facet']['field'] = 'searchCategory';
   $handler->display->display_options['fields']['facet']['label'] = 'Facet Terms';
   $handler->display->display_options['fields']['facet']['alter']['path'] = '[facet]';
+*/
+
   /* Field: Internal search metrics: Results Pageviews */
+/*
   $handler->display->display_options['fields']['pageviews']['id'] = 'searchResultViews';
   $handler->display->display_options['fields']['pageviews']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['pageviews']['field'] = 'searchResultViews';
   $handler->display->display_options['fields']['pageviews']['label'] = '# of Searches';
+*/
+
   /* Sort criterion: Internal search metrics: Results Pageviews */
+/*
   $handler->display->display_options['sorts']['searchResultViews']['id'] = 'searchResultViews';
   $handler->display->display_options['sorts']['searchResultViews']['table'] = 'google_analytics';
   $handler->display->display_options['sorts']['searchResultViews']['field'] = 'searchResultViews';
   $handler->display->display_options['sorts']['searchResultViews']['order'] = 'DESC';
+*/
 
   /* Display: Block */
+/*
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['top_facet_searches'] = array(
@@ -531,7 +545,9 @@ function platform_main_feature_views_default_views() {
     t('Block'),
   );
   $export['top_facet_searches'] = $view;
+*/
 
+/*
   $view = new view();
   $view->name = 'top_site_searches';
   $view->description = 'Google Analytics integration, top site searches';
@@ -540,9 +556,11 @@ function platform_main_feature_views_default_views() {
   $view->human_name = 'Top Site Searches';
   $view->core = 7;
   $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+  $view->disabled = FALSE;
+*/ /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
+/*
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Top Site Searches';
   $handler->display->display_options['use_more_always'] = FALSE;
@@ -575,27 +593,41 @@ function platform_main_feature_views_default_views() {
       'empty_column' => 0,
     ),
   );
+*/
+
   /* Field: Internal search dimensions: Search Term */
+/*
   $handler->display->display_options['fields']['search']['id'] = 'searchKeyword';
   $handler->display->display_options['fields']['search']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['search']['field'] = 'searchKeyword';
   $handler->display->display_options['fields']['search']['label'] = 'Search Terms';
+*/
+
   /* Field: Internal search metrics: Results Pageviews */
+/*
   $handler->display->display_options['fields']['pageviews']['id'] = 'searchResultViews';
   $handler->display->display_options['fields']['pageviews']['table'] = 'google_analytics';
   $handler->display->display_options['fields']['pageviews']['field'] = 'searchResultViews';
   $handler->display->display_options['fields']['pageviews']['label'] = '# of Searches';
+*/
+
   /* Sort criterion: Internal search metrics: Results Pageviews */
+/*
   $handler->display->display_options['sorts']['searchResultViews']['id'] = 'searchResultViews';
   $handler->display->display_options['sorts']['searchResultViews']['table'] = 'google_analytics';
   $handler->display->display_options['sorts']['searchResultViews']['field'] = 'searchResultViews';
   $handler->display->display_options['sorts']['searchResultViews']['order'] = 'DESC';
+*/
 
   /* Display: Block */
+/*
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['empty'] = FALSE;
+*/
+
   /* No results behavior: Global: Text area */
+/*
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
@@ -620,6 +652,7 @@ function platform_main_feature_views_default_views() {
     t('You need to configure Google Analytics to show the Top Site Searches'),
   );
   $export['top_site_searches'] = $view;
+*/
 
   return $export;
 }
